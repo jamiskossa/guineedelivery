@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraison de Colis - Livraison Guinée</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Livraison Guinée</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="commander.html">Repas</a></li>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="colis.html">Colis</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Connexion</a></li>
+                <li><a href="register.html">S'inscrire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Formulaire de Livraison de Colis -->
+    <section class="colis-form">
+        <h2>Demande de Livraison de Colis</h2>
+        <form id="deliveryForm">
+            <label for="pickupAddress">Adresse de Ramassage :</label>
+            <input type="text" id="pickupAddress" name="pickupAddress" placeholder="Entrez l'adresse de ramassage" required>
+
+            <label for="deliveryAddress">Adresse de Livraison :</label>
+            <input type="text" id="deliveryAddress" name="deliveryAddress" placeholder="Entrez l'adresse de livraison" required>
+
+            <label for="packageDetails">Détails du Colis :</label>
+            <textarea id="packageDetails" name="packageDetails" rows="4" placeholder="Entrez les détails du colis (poids, dimensions, contenu)" required></textarea>
+
+            <label for="deliveryType">Type de Livraison :</label>
+            <select id="deliveryType" name="deliveryType" required>
+                <option value="standard">Livraison Standard</option>
+                <option value="express">Livraison Express</option>
+            </select>
+
+            <input type="submit" value="Envoyer la Demande">
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Livraison Guinée - Tous droits réservés</p>
+            <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
