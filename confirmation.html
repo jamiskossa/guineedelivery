@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Confirmation de Commande</title>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h1>Plateforme de Livraison</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="restaurant.html" class="btn-service">Voir les restaurants</a></li>
+            <li><a href="produits.html" class="btn-service">Découvrir les produits</a></li>
+            <li><a href="colis.html" class="btn-service">Envoyer un colis</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="confirmation-section">
+    <h2>Merci pour votre commande !</h2>
+    <p>Votre repas a été commandé avec succès. Voici les détails de votre commande :</p>
+
+    <div class="order-summary">
+        <h3>Détails de la Commande</h3>
+        <p><strong>Restaurant :</strong> <span id="restaurant-name">Restaurant 1</span></p>
+        <p><strong>Plat :</strong> <span id="meal-name">Poulet rôti</span></p>
+        
+        <!-- Ajout du nom de la personne qui passe la commande -->
+        <p><strong>Nom du client :</strong> <span id="customer-name">Nom du client</span></p>
+    
+        <p><strong>Adresse de livraison :</strong> <span id="delivery-address">123 Rue Principale, Conakry</span></p>
+        <p><strong>Téléphone :</strong> <span id="delivery-phone">+224 620 000 000</span></p>
+        <p><strong>Email :</strong> <span id="delivery-email">exemple@exemple.com</span></p>
+    </div>
+
+    <div class="delivery-info">
+        <h3>Informations du Livreur</h3>
+        <p><strong>Nom du Livreur :</strong> <span id="delivery-person">Mohamed Camara</span></p>
+        <p><strong>Téléphone du Livreur :</strong> <span id="delivery-person-phone">+224 622 111 222</span></p>
+    </div>
+
+    <div class="delivery-status">
+        <h3>Statut de la livraison</h3>
+        <p>Votre repas est en cours de préparation et sera livré sous peu.</p>
+        <p>Heure estimée de livraison : <span id="estimated-time">30-45 minutes</span></p>
+    </div>
+
+    <a href="restaurant.html" class="btn-return">Retour aux commandes</a>
+</section>
+
+<footer>
+    <p>&copy; 2024 Plateforme de Livraison. Tous droits réservés.</p>
+</footer>
+
+<script>
+    // Récupération des informations stockées dans localStorage
+    document.getElementById('restaurant-name').textContent = localStorage.getItem('restaurant') || 'Non spécifié';
+    document.getElementById('meal-name').textContent = localStorage.getItem('meal') || 'Non spécifié';
+    
+    // Ajout du nom du client
+    document.getElementById('customer-name').textContent = localStorage.getItem('name') || 'Nom inconnu';
+    
+    document.getElementById('delivery-address').textContent = localStorage.getItem('address') || 'Adresse inconnue';
+    document.getElementById('delivery-phone').textContent = localStorage.getItem('phone') || 'Numéro inconnu';
+    document.getElementById('delivery-email').textContent = localStorage.getItem('email') || 'Email inconnu';
+</script>
+
+</body>
+</html>
+
